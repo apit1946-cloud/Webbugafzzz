@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug WhatsApp Afzzz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 40px;
+        }
+        
+        h1 {
+            color: #075E54;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #075E54;
+            font-weight: 600;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus {
+            border-color: #25D366;
+            outline: none;
+        }
+        
+        .btn {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background-color: #128C7E;
+        }
+        
+        .telegram-link {
+            display: block;
+            margin-top: 15px;
+            color: #25D366;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .telegram-link:hover {
+            text-decoration: underline;
+        }
+        
+        .bug-options {
+            margin-top: 25px;
+            text-align: left;
+        }
+        
+        .bug-options h3 {
+            color: #075E54;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .bug-item {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .bug-item:hover {
+            background-color: #f0f8f0;
+            border-color: #25D366;
+        }
+        
+        .bug-item.selected {
+            background-color: #e1f7e9;
+            border-color: #25D366;
+        }
+        
+        .success-message {
+            display: none;
+            background-color: #e1f7e9;
+            color: #075E54;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .footer {
+            margin-top: 25px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">WA</div>
+        <h1>Bug WhatsApp Afzzz</h1>
+        
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Masukkan username">
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Sandi</label>
+            <input type="password" id="password" placeholder="Masukkan sandi">
+        </div>
+        
+        <button class="btn" id="loginBtn">Login</button>
+        
+        <a href="https://t.me/Afzzstore000" class="telegram-link" target="_blank">Buy Access - @Afzzstore000</a>
+        
+        <div class="form-group">
+            <label for="phone">Masukkan Nomor (Awalan 62)</label>
+            <input type="text" id="phone" placeholder="62xxxxxxxxxxx">
+        </div>
+        
+        <div class="bug-options">
+            <h3>Pilih Metode Bug</h3>
+            <div class="bug-item" data-bug="forclose">Bug Forclose</div>
+            <div class="bug-item" data-bug="delayhard">Bug Delayhard</div>
+            <div class="bug-item" data-bug="ios">Bug Ios</div>
+            <div class="bug-item" data-bug="blank">Bug Blank</div>
+        </div>
+        
+        <button class="btn" id="sendBugBtn">Kirim Bug</button>
+        
+        <div class="success-message" id="successMessage">
+            Berhasil mengirimkan bug by Afzzz
+        </div>
+        
+        <div class="footer">
+            &copy; 2023 Afzzz - All rights reserved
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginBtn = document.getElementById('loginBtn');
+            const sendBugBtn = document.getElementById('sendBugBtn');
+            const bugItems = document.querySelectorAll('.bug-item');
+            const successMessage = document.getElementById('successMessage');
+            
+            let selectedBug = null;
+            
+            // Login validation
+            loginBtn.addEventListener('click', function() {
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                
+                if (username === 'wa2706' && password) {
+                    alert('Login berhasil!');
+                } else {
+                    alert('Username atau sandi salah!');
+                }
+            });
+            
+            // Bug selection
+            bugItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    bugItems.forEach(i => i.classList.remove('selected'));
+                    this.classList.add('selected');
+                    selectedBug = this.getAttribute('data-bug');
+                });
+            });
+            
+            // Send bug
+            sendBugBtn.addEventListener('click', function() {
+                const phone = document.getElementById('phone').value;
+                
+                if (!phone.startsWith('62')) {
+                    alert('Nomor harus diawali dengan 62!');
+                    return;
+                }
+                
+                if (!selectedBug) {
+                    alert('Pilih metode bug terlebih dahulu!');
+                    return;
+                }
+                
+                // Simulate sending bug to WhatsApp
+                const message = `Bug ${selectedBug} untuk nomor ${phone}`;
+                const whatsappUrl = `https://wa.me/6281361278573?text=${encodeURIComponent(message)}`;
+                
+                // Open WhatsApp
+                window.open(whatsappUrl, '_blank');
+                
+                // Show success message
+                successMessage.style.display = 'block';
+                
+                // Reset form
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                    bugItems.forEach(i => i.classList.remove('selected'));
+                    selectedBug = null;
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+</html>
